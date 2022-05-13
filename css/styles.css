@@ -1,0 +1,539 @@
+/*Import de fuentes*/
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset de estilos */
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Base */
+
+body {
+
+    font-family: 'Barlow', sans-serif;
+    text-rendering: optimizeLegibility;
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center
+}
+
+/* Estilos contenedor general y set de GRID desktop*/
+
+.container {
+
+    display: grid;
+    margin: 0 auto;
+    width: 70vw;
+    height: 100vh;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "header header header header header"
+        "main main main main main"
+        "footer footer footer footer footer";
+    row-gap: 0.5rem;
+
+}
+
+a {
+    display: inline-flex;
+    text-decoration: none;
+    color: #ad76ab;
+}
+
+a:hover {
+    color: #D73FA7;
+}
+
+/* Secciones */
+
+header {
+    grid-area: header;
+    padding-top: 1rem;
+}
+
+
+main {
+
+    grid-area: main;
+}
+
+footer {
+    display: flex;
+    grid-area: footer;
+    height: 12.5rem;
+}
+
+/* Headings */
+
+.headings {
+    border-bottom: 1px solid rgb(216, 215, 215);
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #754c73;
+    line-height: 2.5rem;
+    margin: 1rem 0rem 2rem 0rem;
+}
+
+.subtitle {
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    margin: 1rem 0rem 1rem 0rem;
+    color: #80567f;
+}
+
+.subtitleDesc {
+    font-weight: 300;
+    font-size: 20px;
+    color: #643a63;
+}
+
+
+/* Nav principal */
+
+.logo {
+    width: 200px;
+}
+
+nav {
+    flex: 1 1 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+nav ul a {
+    display: inline-flex;
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    height: 63px;
+    line-height: 63px;
+    height: 63px;
+    align-items: center;
+}
+
+.menuCheck {
+    display: block;
+}
+
+.menuCheckLabel {
+    display: none;
+}
+
+.logoMenu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.slider {
+    overflow: hidden;
+    width: 100%;
+}
+
+
+.slider ul {
+    list-style: none;
+}
+
+/* Call to action */
+
+.ctaBig {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: rgb(128, 121, 144);
+    border-radius: 0.4rem;
+    color: #fff;
+    margin: 15px;
+
+}
+
+.ctaBig:hover {
+    background-color: rgb(114, 87, 137);
+    color: #fff;
+}
+
+
+
+/* Contenido */
+
+.textBlack {
+    font-weight: 500;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+
+p {
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.textJustify {
+    text-align: justify;
+}
+
+/*footer*/
+
+.copyright {
+    display: flex;
+    width: 20%;
+    align-items: center;
+    height: 12.5rem;
+}
+
+.links {
+    padding-left: 20px;
+    display: flex;
+    width: 30%;
+    align-items: center;
+    list-style-position: inside;
+    color: #D73FA7;
+    font-size: 1.1rem;
+    font-weight: 400;
+    height: 12.5rem;
+}
+
+.social {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    height: 12.5rem;
+
+
+}
+
+.social ul {
+    display: flex;
+    list-style: none;
+}
+
+.social ul li a {
+    padding: 0.5rem;
+    font-size: 2rem;
+}
+
+.showcase {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.scItem {
+    width: 255px;
+    height: 140px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    /* From https://css.glass */
+    border-radius: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    background: -webkit-linear-gradient(top left, rgba(255, 255, 255, 1.0), rgba(244, 235, 240, 0.2));
+    background: -moz-linear-gradient(top left, rgba(255, 255, 255, 1.0), rgba(244, 235, 240, 0.2));
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 1.0), rgba(244, 235, 240, 0.2));
+
+}
+
+.imgFit {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.portfolioItem {
+    width: 240px;
+    height: 250px;
+    border-radius: 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    background: -webkit-linear-gradient(top left, rgba(255, 255, 255, 1.0), rgba(244, 235, 240, 0.2));
+    background: -moz-linear-gradient(top left, rgba(255, 255, 255, 1.0), rgba(244, 235, 240, 0.2));
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 1.0), rgba(244, 235, 240, 0.2));
+    position: relative;
+}
+
+.portfolioItem p {
+    text-align: left;
+    margin: 5px 0;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #754c73;
+
+}
+
+.block70 {
+    width: 70%;
+
+}
+
+.block30 {
+    width: 30%;
+
+}
+
+.flex {
+    display: flex;
+
+}
+
+.textRight {
+    text-align: right;
+}
+
+.spaced20 {
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.seeMore {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2rem;
+    font-size: 2rem;
+}
+
+.showcase li a {
+    transition: all .5s ease-in-out;
+}
+
+.showcase li a:hover {
+    transform: scale(1.1);
+}
+
+.videoContainer {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+
+.videoContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 99%;
+}
+
+/* Formulario */
+
+legend {
+    color: #9e759c;
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.inputFormulario {
+    width: 100%;
+    display: inline-block;
+    font-family: 'Barlow', sans-serif;
+    font-size: 20px;
+    margin: 5px 0px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.text {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+
+    padding: 20px;
+    color: #333;
+    font-family: 'Barlow', sans-serif;
+    font-size: 20px;
+}
+
+#formulario {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.botones {
+    font-size: 15px;
+    width: 140px;
+    height: 50px;
+    border-width: 1px;
+    color: #ffffff;
+    border-color: #a511c0;
+    font-weight: bold;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 200;
+    background: #754c73;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+
+/*Media queries*/
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+        flex-direction: column;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "header header"
+            "main main"
+            "footer footer";
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    nav ul li a {
+        border-bottom: 1px solid #ccc;
+        width: 100%;
+    }
+
+    nav ul li a:last-child {
+        border: 0;
+    }
+
+
+    .spaced20 {
+        margin: 0;
+    }
+
+    .showcase {
+        flex-direction: column;
+    }
+
+    .portfolioItem {
+        width: 100%;
+        height: 10rem;
+
+        padding: 2rem;
+        margin-bottom: 1rem;
+
+    }
+
+    header {
+        padding: 0;
+    }
+
+    .logoMenu {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+    }
+
+    .ctaBig {
+        width: 100%;
+        margin: 2rem 0rem 0rem 0rem;
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+
+    .scItem {
+        width: 100%;
+
+        margin-bottom: 1rem;
+    }
+
+    #clients {
+        display: none;
+    }
+
+    .links {
+        display: none;
+    }
+
+    footer {
+        display: block;
+        margin: 0 auto;
+        padding-top: 2rem;
+
+    }
+
+    .social {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 1rem;
+        height: 12.5rem;
+    }
+
+    .copyright {
+        height: fit-content;
+        width: 100%;
+    }
+
+    .menuCheckLabel {
+        position: absolute;
+        right: 1.5rem;
+        top: 2rem;
+        box-sizing: border-box;
+        display: inline-flex;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        text-align: center;
+        user-select: none;
+        font-size: 2rem;
+
+    }
+
+    .slider {
+        margin-top: 0.4rem;
+    }
+
+    #formulario {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .botones {
+        width: 100%;
+    }
+
+    /*cierre mediaquery*/
+}
+
